@@ -1,0 +1,23 @@
+
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Nouveau message{% endblock %}
+
+{% block body %}
+{{ include('_navbar.html.twig')}}
+
+<div class="max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800 mt-8 mb-8">
+<h1 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate text-center mt-8"> NEW Message</h1>
+
+{{ form_start(form)}}
+{{ form_widget(form)}}
+    <button class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " type="submit" formnovalidate>Envoyer</button>
+{{ form_end(form)}}
+
+
+
+ <p><a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_rooms_show', {'id': room.id})}}">Retour</a></p>
+ </div>
+ {{ include('footer.html.twig')}}
+
+{% endblock %}

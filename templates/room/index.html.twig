@@ -1,0 +1,133 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Forum{% endblock %}
+
+{% block body %}
+
+
+
+{{ include('_navbar.html.twig')}}
+
+{# HERO #}
+
+
+
+
+    <header class="bg-white dark:bg-gray-800">
+        
+
+        <div class="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-128 lg:py-16 lg:flex-row lg:items-center lg:space-x-6">
+            <div class="w-full lg:w-1/2">
+                <div class="lg:max-w-lg">
+                    <h1 class="text-2xl font-medium tracking-wide text-gray-800 dark:text-white lg:text-4xl">Bienvenue dans l'espace d'échange</h1>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">Profitez du réseaux de toutes la communauté pour vous entrainer ou vous voulez </p>
+                    <div class="grid gap-6 mt-8 sm:grid-cols-2">
+                        <div class="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+
+                            <span>Créer des salons de discussion</span>
+                        </div>
+
+                        <div class="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+
+                            <span>Trouver une salle ou vous entrainer</span>
+                        </div>
+
+                        <div class="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+
+                            <span>Echangez avec la cimmunauté</span>
+                        </div>
+
+                        <div class="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+
+                            <span>Demandez de l'aide</span>
+                        </div>
+
+                        <div class="flex items-center space-x-6 text-gray-800 dark:text-gray-200">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+
+                            <span>Trouvez des bons plans</span>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
+                <img class="object-cover w-full h-full max-w-2xl rounded-md" src="https://images.unsplash.com/photo-1519311965067-36d3e5f33d39?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="glasses photo">
+            </div>
+        </div>
+    </header>
+    <hr>
+{# TABLE #}
+
+<div class="w-full sm:px-6 mt-8">
+    <div class="px-4 md:px-10 py-4 md:py-7 bg-gray-100 rounded-tl-lg rounded-tr-lg">
+        <div class="sm:flex items-center justify-between">
+            <p tabindex="0" class="focus:outline-none text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800">FORUM</p>
+            <div>
+                <a href="{{ path('app_rooms_new')}}" class="focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-blue-500 hover:bg-blue-600 focus:outline-none rounded">
+                    <p class="text-sm font-medium leading-none text-white">Ajouter un salon de discussion</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white shadow px-4 md:px-10 pt-4 md:pt-7 pb-5 overflow-y-auto">
+        <table class="w-full whitespace-nowrap">
+            <thead>
+                <tr tabindex="0" class="focus:outline-none h-16 w-full text-sm leading-none text-gray-800">
+                    <th class="font-normal text-left pl-4">Nom de la discussion</th>
+                    
+                </tr>
+            </thead>
+            {% for room in rooms %}
+            <tbody class="w-full">
+                <tr tabindex="0" class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td class="pl-4 cursor-pointer">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10">
+                                <img class="w-full h-full" src="https://image.flaticon.com/icons/png/512/432/432294.png" alt="UX Design and Visual Strategy" />
+                            </div>
+                            <div class="pl-4">
+                                <p class="font-medium">{{ room.name }}</p>
+                                
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12">
+                        <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2" href="{{ path('app_rooms_show', {'id': room.id})}}">Entrer dans la discussion</a>
+                            
+                        
+                    </td>
+                    <td class="pl-12">
+                        <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2" href="{{ path('app_rooms_edit', {'id': room.id})}}">Editer la discussion</a>
+                    </td>
+                    
+                </tr>
+                
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{{ include('footer.html.twig')}}
+
+
+{% endblock %}

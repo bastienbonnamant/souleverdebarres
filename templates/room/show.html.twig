@@ -1,0 +1,35 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Show{% endblock %}
+
+{% block body %}
+{{ include('_navbar.html.twig')}}
+
+
+<div class="max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
+
+       <h1 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate text-center mt-8"> Salle : {{ room.name }}</h1>
+            {% for message in room.messages %}
+                <div >
+                    {{ message.createdAt|date('d M H:i') }}: {{ message.content}}
+                    <hr>
+                
+                </div>
+            {% endfor %}
+
+    <p>
+        <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_messages_new', {'room': room.id})}}">Nouveau message</a>
+    </p>
+        <p>
+        <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_rooms_edit', {'id': room.id})}}">Editer le nom de la discussion</a>
+    </p>
+    <p>
+    <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_rooms_index')}}">Back</a>
+    </p>
+        </div>
+</div>
+   
+
+{{ include('footer.html.twig')}}
+
+{% endblock %}

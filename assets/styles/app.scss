@@ -1,0 +1,13 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+$body: white;
+
+body {
+    background-color: $body;
+}
+
+.footer-color{
+    background-color: white;
+}
