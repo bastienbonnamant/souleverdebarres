@@ -38,6 +38,8 @@ class RoomController extends AbstractController
             $this->addFlash(
                 'success', 
                 sprintf('Discussion créé !', $room->getName())
+                //addFlash est une fonction qui permet d'ajouter un message, ici de type 'succes'
+                //ensuite sprintf retourne une chaine formaté, 'discussion créé ! puis on récupère l'objet room et son nom avec getName.
             );
 
             return $this->redirectToRoute('app_rooms_show', ['id' => $room->getId()]);

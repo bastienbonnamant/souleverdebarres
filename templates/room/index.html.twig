@@ -68,21 +68,24 @@
             </div>
     
             <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
-                <img class="object-cover w-full h-full max-w-2xl rounded-md" src="https://images.unsplash.com/photo-1519311965067-36d3e5f33d39?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="glasses photo">
+                <img class="object-cover w-full h-full max-w-2xl rounded-md shadow-2xl" src="https://images.unsplash.com/photo-1519311965067-36d3e5f33d39?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="glasses photo">
             </div>
         </div>
     </header>
     <hr>
 {# TABLE #}
 
-<div class="w-full sm:px-6 mt-8">
+<div class="w-full sm:px-6 mt-8 mb-8">
     <div class="px-4 md:px-10 py-4 md:py-7 bg-gray-100 rounded-tl-lg rounded-tr-lg">
         <div class="sm:flex items-center justify-between">
             <p tabindex="0" class="focus:outline-none text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800">FORUM</p>
             <div>
+                {% if app.user %}
+
                 <a href="{{ path('app_rooms_new')}}" class="focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-blue-500 hover:bg-blue-600 focus:outline-none rounded">
                     <p class="text-sm font-medium leading-none text-white">Ajouter un salon de discussion</p>
                 </a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -113,9 +116,12 @@
                             
                         
                     </td>
+                    {% if app.user %}
+
                     <td class="pl-12">
                         <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2" href="{{ path('app_rooms_edit', {'id': room.id})}}">Editer la discussion</a>
                     </td>
+                    {% endif %}
                     
                 </tr>
                 
@@ -125,7 +131,29 @@
         </table>
     </div>
 </div>
+{# CTA #}
 
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-gray-50">
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+      <span class="block">Par des haltéro pour des haltéro</span>
+      <span class="block text-blue-500">+450 salles référencés</span>
+    </h2>
+    <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+      <div class="inline-flex rounded-md shadow">
+        <a href="{{ path('security_registration')}}" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+          Créer un compte
+        </a>
+      </div>
+      <div class="ml-3 inline-flex rounded-md shadow">
+        <a href="{{ path('security_login')}}" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50">
+          Se connecter
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 {{ include('footer.html.twig')}}
 

@@ -6,17 +6,18 @@
 {{ include('_navbar.html.twig')}}
 
 
-<div class="max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
+<div class="max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-8 mb-8">
 
        <h1 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate text-center mt-8"> Salle : {{ room.name }}</h1>
             {% for message in room.messages %}
-                <div >
+                <div class="text-lg mt-8" >
                     {{ message.createdAt|date('d M H:i') }}: {{ message.content}}
                     <hr>
                 
                 </div>
             {% endfor %}
-
+<div class="flex flex-row mt-8">
+        {% if app.user %}
     <p>
         <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_messages_new', {'room': room.id})}}">Nouveau message</a>
     </p>
@@ -24,8 +25,10 @@
         <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_rooms_edit', {'id': room.id})}}">Editer le nom de la discussion</a>
     </p>
     <p>
+        {% endif %}
     <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_rooms_index')}}">Back</a>
     </p>
+</div>
         </div>
 </div>
    
