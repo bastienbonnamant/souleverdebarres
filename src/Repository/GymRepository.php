@@ -23,7 +23,7 @@ class GymRepository extends ServiceEntityRepository
 
     public function findSearch(?string $search){
         $queryBuilder = $this->createQueryBuilder('g')
-        ->Where('g.name like :search')
+        ->Where('g.name like :search OR g.adress like :search OR g.email like :search OR g.city like :search')
         ->setParameter('search', '%' . $search . '%')
         ->getQuery();
 

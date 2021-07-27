@@ -20,7 +20,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      */
     public function index(Request $request, PaginatorInterface $paginator, GymRepository $gymRepository): Response
     {
@@ -61,24 +61,7 @@ class HomeController extends AbstractController
     
     }
 
-    public function add(): string
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // clean $_POST data
-            $gym = array_map('trim', $_POST);
-            //if ($gym['stock'] == 'on') $gym['stock'] = 1;
-
-            // TODO validations (length, format...)
-
-            // if validation is ok, insert and redirection
-            $gymManager = new Gym();
-            $id = $gymManager->insert($gym);
-
-            //header c'est la ou tu veux rediriger apres avoir ajouté
-            header('Location:/home/index/' . $id);
-        }
-        return $this->twig->render('home/index.html.twig');
-    }
+    
 
     
   
