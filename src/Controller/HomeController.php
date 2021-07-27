@@ -36,7 +36,7 @@ class HomeController extends AbstractController
              if ($form->isSubmitted() && $form->isValid()) {
                  $search = $form->getData();
                  $data = $gymRepository->findSearch($search['search']);
-                 // Pourquoi getData, findsearch ?
+                 // dans le gymrepository il y a une methode findsearch dans laquelle on va chercher ce qu'on tape dans la barre de recherche
              
                  $gym = $paginator->paginate(
                      $data, // Requête contenant les données à paginer
