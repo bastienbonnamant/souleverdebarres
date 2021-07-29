@@ -50,8 +50,8 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 table.table.home-table {
     box-shadow: 7px 5px 16px 4px #c3c3c3;
     border-radius: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: auto;
+    width: 80%;
 }
 
 .text-white {
@@ -62,6 +62,10 @@ table.table.home-table {
 
 img.card-img.banner {
     height: 40rem;
+}
+
+.card.bg-dark.text-white {
+    margin-bottom: 100px;
 }
 
 .card-img-overlay {
