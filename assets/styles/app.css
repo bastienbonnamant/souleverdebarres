@@ -51,7 +51,8 @@ table.table.home-table {
     box-shadow: 7px 5px 16px 4px #c3c3c3;
     border-radius: 10px;
     margin: auto;
-    width: 80%;
+    width: 90%;
+    margin-bottom: 100px;
 }
 
 .text-white {
