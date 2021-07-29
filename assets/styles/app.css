@@ -38,9 +38,13 @@ a.nav-link {
     border-radius: 20px;
 }
 
+nav.bg-transparent.sticky-top.navbar.navbar-expand-lg.navbar-light.bg-light {
+    margin-top: -90px;
+}
+
 a.nav-link:hover {
     box-shadow: 1px 3px 18px #c5c5c5;
-    background-color: lightgrey;
+    background-color: white;
 }
 
 nav.navbar.navbar-expand-lg.navbar-light.bg-light {
@@ -104,3 +108,26 @@ button#search_gym_Go:hover {
 img.icon-bar {
     height: 50px;
 }
+
+h1.titre-table {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+    font-family: 'Poppins';
+}
+
+h6{
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: #60a5fa;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
