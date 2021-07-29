@@ -1,0 +1,101 @@
+*{
+    font-family: Poppins;
+}
+
+
+body {
+    background-color: white;
+}
+
+.footer-color{
+    background-color: white;
+}
+
+div#search_gym {
+    display: flex;
+    justify-content: center;
+}
+input#search_gym_search {
+    height: 60px;
+    border-radius: 45px;
+    box-shadow: 5px 4px 16px 0px #5d5d5d;
+    border-color: #60a5fa;
+    border-width: revert;
+}
+
+label.required {
+    display: none!important;
+}
+
+input#search_gym_search {
+    padding: 25px;
+    width: 850px;
+}
+
+a.nav-link {
+    background-color: #60a5fa;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+a.nav-link:hover {
+    box-shadow: 1px 3px 18px #c5c5c5;
+    background-color: lightgrey;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    height: 90px;
+}
+
+table.table.home-table {
+    box-shadow: 7px 5px 16px 4px #c3c3c3;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.text-white {
+    color: #fff!important;
+    text-align: center;
+    font-size: 30px;
+}
+
+img.card-img.banner {
+    height: 40rem;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 11.25rem;
+}
+
+p.card-text {
+    font-weight: bold;
+    
+}
+
+thead.thead-color {
+    background-color: #60a5fa;
+    color: white;
+}
+
+button#search_gym_Go {
+    background-color: #60a5fa;
+    color: white;
+    /* box-shadow: 4px 3px 18px #6b6b6b; */
+    border: none;
+    border-radius: 30px;
+}
+
+button#search_gym_Go:hover {
+    background-color: white;
+    color: #60a5fa;
+}
+
+img.icon-bar {
+    height: 50px;
+}

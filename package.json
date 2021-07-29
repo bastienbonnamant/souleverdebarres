@@ -3,7 +3,6 @@
         "@symfony/stimulus-bridge": "^2.0.0",
         "@symfony/webpack-encore": "^1.0.0",
         "@tailwindcss/postcss7-compat": "^2.2.4",
-        "autoprefixer": "^10.3.1",
         "core-js": "^3.0.0",
         "postcss-loader": "^6.1.1",
         "purgecss-webpack-plugin": "^4.0.3",
@@ -11,7 +10,6 @@
         "sass": "^1.35.2",
         "sass-loader": "^12.0.0",
         "stimulus": "^2.0.0",
-        "tailwindcss": "npm:@tailwindcss/postcss7-compat",
         "webpack-notifier": "^1.6.0"
     },
     "license": "UNLICENSED",
@@ -22,5 +20,7 @@
         "watch": "encore dev --watch",
         "build": "encore production --progress"
     },
-    "dependencies": {}
+    "dependencies": {
+        "bootstrap": "^5.0.2"
+    }
 }
