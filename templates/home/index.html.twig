@@ -6,15 +6,43 @@
 {{ include('_navbar.html.twig')}}
 
 <div class="card bg-dark text-white">
-  <img class="card-img banner" src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Card image">
+  <img class="card-img banner">
   <div class="card-img-overlay">
-    <p class="card-text">Trouvez ou vous entrainer partout en FRANCE !</p>
-    {% include 'search/search.html.twig' %}  
+    <p class="card-text-header">Trouvez ou vous entrainer partout en FRANCE !</p>
+    <div class="btn-header">
+    <a href="#" class="btn btn-primary btn-card">Trouver une salle</a>
+    <a href="#" class="btn btn-primary btn-card-1">Connexion</a>
+    </div>  
   </div>
 </div>
 
+{# CARDS #}
+<div class="card-group">
+  <div class="card text-center" style="width: 18rem; height:25rem">
+    <div class="card-body-1">
+      <h2 class="card-title-1">Calculez votre IWF</h2>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary btn-card">Calculer mon IWF</a>
+    </div>
+  </div>
+  <div class="card text-center" style="width: 18rem; height:25rem">
+    <div class="card-body-2">
+      <h2 class="card-title-2">Tous les résultats du championnat de France par équipe</h2>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary btn-card">Voir les résultats</a>
+    </div>
+  </div>
+  <div class="card text-center" style="width: 18rem; height:25rem">
+    <div class="card-body-3">
+      <h2 class="card-title-1">Trouvez une salle ou Souleverdesbarres</h2>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary btn-card">Trouver une salle</a>
+    </div>
+  </div>
+</div>
 {# TABLE #}
 <h1 class="titre-table">Toutes les salles pour pratiquer l'haltérophilie</h1>
+{% include 'search/search.html.twig' %}  
 
 <table class="table home-table">
   <thead class="thead-color">
