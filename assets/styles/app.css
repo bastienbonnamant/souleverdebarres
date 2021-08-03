@@ -2,6 +2,12 @@
     font-family: Poppins;
 }
 
+a {
+    color: #A2A2E0;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
 
 body {
     background-color: white;
@@ -217,4 +223,67 @@ h6{
     font-weight: 700;
     color: black;
     font-size: 30px;
+}
+
+p.card-text-1 {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*
+* PAGE LOGIN
+*/
+
+.card-login {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    margin-top: 130px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 13px 0px darkgrey;
+}
+
+h3.titre-login {
+    text-align: center;
+    margin: 40px;
+}
+
+button.btn-login {
+    background-color: #A2A2E0;
+    color: white;
+    border-radius: 20px;
+    margin: 0px;
+}
+
+.registration {
+    text-align: center;
+    padding: 30px;
+}
+
+/*
+* FORUM INDEX
+*/
+.card-forum {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
+    margin-top: 150px;
+    box-shadow: 5px 3px 13px 0px #848484;
+    border-radius: 10px;
+}
+
+p.room-name {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+h1.h1-forum {
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 60px;
+    margin-top: 130px;
 }

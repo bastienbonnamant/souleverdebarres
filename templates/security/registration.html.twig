@@ -3,22 +3,23 @@
 {% block body %}
 {{ include('_navbar.html.twig')}}
 
-<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-md w-full space-y-8">
-      <div>
-        <img class="mx-auto h-12 w-auto" src="https://image.flaticon.com/icons/png/512/1000/1000059.png" alt="Workflow">
-        <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Créer un compte
-        </h2>
+    <div class="card-login" style="width: 35rem;">
+      <div class="registration">
+        <h2 class="">Créer un compte</h2>
+
         {{ form_start(form) }}
         {{ form_row(form.username, {'attr': {'placeholder': 'Nom de compte'}}) }}
         {{ form_row(form.email, {'attr': {'placeholder': 'email'}}) }}
         {{ form_row(form.password , {'attr': {'placeholder': 'Mot de passe'}}) }}
         {{ form_row(form.confirm_password, {'attr': {'placeholder': 'Confirmer me mot de passe'}})}}
         <br>
-        <input class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" type="submit">
-
+        <input class="" type="submit">
+      </div>
+    </div>
         {{ form_end(form) }} 
+
+        {{ include('footer.html.twig')}}
+
 {% endblock %}
 
 
