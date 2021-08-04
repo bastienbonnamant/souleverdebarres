@@ -2,28 +2,63 @@
 
 {% block body %}
 
-{{ include('_navbar.html.twig')}}
+{{ include('_navbar2.html.twig')}}
 
+<div id="main-wrapper" class="container">
+  <div class="row justify-content-center">
+      <div class="col-xl-10">
+          <div class="card border-0">
+              <div class="card-body p-0">
+                  <div class="row no-gutters">
+                      <div class="col-lg-6">
+                          <div class="p-5">
+                              <div class="mb-5">
+                                  <h3 class="h4 font-weight-bold text-theme">Connexion</h3>
+                              </div>
+                              <h6 class="h5 mb-0">Bienvenue !</h6>
+                              <form>
+                                  <div class="form-group">
+                                      <label for="exampleInputEmail1">Adresse email</label>
+                                      <input type="email" class="form-control" id="exampleInputEmail1">
+                                  </div>
+                                  <div class="form-group mb-5">
+                                      <label for="exampleInputPassword1">Mot de passe</label>
+                                      <input type="password" class="form-control" id="exampleInputPassword1">
+                                  </div>
+                                  <button type="submit" class="btn btn-theme">Connexion</button>
+                              </form>
+                          </div>
+                      </div>
 
+                      <div class="col-lg-6 d-none d-lg-inline-block">
+                          <div class="account-block rounded-right">
+                              <div class="overlay rounded-right"></div>
+                              <div class="account-testimonial">
+                                  <p class="lead text-white">« Je ne considère pas les membres des autres fédérations comme des rivaux. Le seul rival, c’est le record du monde »</p>
+                                  <p>LU XIAOJUN</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
 
-  <div class="card-login" style="width: 35rem;">
-    <div class="card-body">
-        <h3 class="titre-login">Se connecter à mon compte</h3>
-        <div class="">
-            <label for="email" class="">Nom de compte</label>
-            <input  placeholder="Adresse email" id="email" autocomplete="off" required aria-required="true" name="_username" class="" type="text" />
-        </div>
-        <div class="">
-            <label for="password" class="">Mot de passe </label>
-            <input placeholder="Mot de passe" id="password" required aria-required="true" name="_password" type="password" class="" />
-        </div>
-        <div class="">
-            <button type="submit" class="btn-login">Connexion</button>
-            <p class="mt-6 text-xs">Pas de compte ?<a class="" href="{{ path('security_registration')}}">Créer un compte</a><br><a class="" href="{{ path('home')}}">Retour à l'accueil</a></p>
-        </div>
-    </div>
-  </div>    
+              </div>
+              <!-- end card-body -->
+          </div>
+          <!-- end card -->
 
+          <p class="text-muted text-center mt-3 mb-0">Pas encore de compte ? <a href="{{ path('security_registration')}}" class="text-primary ml-1">register</a></p>
+
+          <!-- end row -->
+
+      </div>
+      <!-- end col -->
+  </div>
+  <!-- Row -->
+</div>
+
+   
+
+  
 
 
 {{ include('footer.html.twig')}}

@@ -1,92 +1,74 @@
 {% block body %}
 
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
-  <!-- Section: Social media -->
-  <section
-    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-  >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
 
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
-
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>A propos
-          </h6>
-          <p>
-            Site regroupant +450 salles de crossfit et haltérophilie en France.
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Liens utiles
-          </h6>
-          <p>
-            <a href="{{ path('security_login')}}" class="text-reset">Connexion</a>
-          </p>
-          <p>
-            <a href="{{ path('security_registration')}}" class="text-reset">Inscription</a>
-          </p>
-          <p>
-            <a href="#" class="text-reset">Trouver une salle</a>
-          </p>
-          <p>
-            <a href="{{ path('app_rooms_index')}}" class="text-reset">Forum</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-       
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
-    </div>
-  </section>
-  <!-- Section: Links  -->
-
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 All rights reserved:
-    <a class="text-reset fw-bold" href="https://baastien.com/">Bastien Bonnamant</a>
-  </div>
-  <!-- Copyright -->
+<footer class="deneb_footer">
+	<div class="widget_wrapper" style="background-image: url(http://demo.tortoizthemes.com/deneb-html/deneb-ltr/assets/images/footer_bg.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="widget widegt_about">
+						<div class="widget_title">
+							<img src="assets/images/logo_1.png" class="img-fluid" alt="">
+						</div>
+						<p>Site regroupant plus de 450 salles de crossfit et haltérophilie. Trouvez facilement ou vous entrainer en France.</p>
+						
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="widget widget_link">
+						<div class="widget_title">
+							<h4>Liens utiles</h4>
+						</div>
+						<ul>
+							<li><a href="#">Forum</a></li>
+							<li><a href="#">Connexion</a></li>
+							<li><a href="#">Inscription</a></li>
+							<li><a href="#">Trouver une salle</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="widget widget_contact">
+						<div class="widget_title">
+							<h4>Contact Us</h4>
+						</div>
+						<div class="contact_info">
+							<div class="single_info">
+								
+							</div>
+							<div class="single_info">
+								<div class="icon">
+									<i class="fas fa-envelope"></i>
+								</div>
+								<div class="info">
+									<p><a href="mailto:info@deneb.com">info@souleverdesbarres.com</a></p>
+								</div>
+							</div>
+							<div class="single_info">
+								<div class="icon">
+									<i class="fas fa-map-marker-alt"></i>
+								</div>
+								<div class="info">
+									<p>France</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright_area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="copyright_text">
+						<p>Copyright &copy; 2021 Bastien Bonnamant</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
-<!-- Footer -->
 {% endblock %}
