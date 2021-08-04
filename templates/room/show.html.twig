@@ -3,7 +3,7 @@
 {% block title %}Show{% endblock %}
 
 {% block body %}
-{{ include('_navbar.html.twig')}}
+{{ include('_navbar2.html.twig')}}
 
 
 <div class="max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-8 mb-8">
@@ -17,7 +17,7 @@
                 </div>
             {% endfor %}
 <div class="flex flex-row mt-8">
-        {% if app.user %}
+        
     <p>
         <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_messages_new', {'room': room.id})}}">Nouveau message</a>
     </p>
@@ -25,7 +25,7 @@
         <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_rooms_edit', {'id': room.id})}}">Editer le nom de la discussion</a>
     </p>
     <p>
-        {% endif %}
+       
     <a class="bg-blue-500 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100 rounded-full px-6 m-2 " href="{{ path('app_rooms_index')}}">Back</a>
     </p>
 </div>

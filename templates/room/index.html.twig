@@ -6,29 +6,37 @@
 
 
 
-{{ include('_navbar.html.twig')}}
-
-   
-{# TABLE #}
-<h1 class="h1-forum">FORUM</h1>
-            {% for room in rooms %}
-            <div class="card-forum" style="width: 75rem;">
-
-            <table class="table table-striped">
-            <p class="room-name">{{ room.name }}</p>
-            </td>
-             <td class="">
-             <a class="room-btn" href="{{ path('app_rooms_show', {'id': room.id})}}">Entrer dans la discussion</a>
-            </td>
-            <td class="">
-            <a class="room-btn" href="{{ path('app_rooms_edit', {'id': room.id})}}">Editer la discussion</a>
-            </td>
-            
-            {% endfor %}
-        </table>
+{{ include('_navbar2.html.twig')}}     
+            <div class="card bg-dark text-white">
+                <img class="card-img banner">
+                <div class="card-img-overlay">
+                <p class="card-text-header">Bienvenue sur l'espace d'échange</p>
+                <div class="btn-header">
+                <a href="{{ path('app_rooms_new')}}" class="btn btn-primary btn-card">Créer un salon de discussion</a>
+                <a href="{{ path('security_login')}}" class="btn btn-primary btn-card-1">Connexion</a>
+                </div>  
+                </div>
             </div>
 
+            <!-- Forum List -->
+            {% for room in rooms %}
+            <div class="inner-main-body p-2 p-sm-3 collapse forum-content show">
+                <div class="card mb-2">
+                    <div class="card-body p-2 p-sm-3">
+                        <div class="media forum-item">
+                            <a href="#" data-toggle="collapse" data-target=".forum-content"><img src="https://image.flaticon.com/icons/png/512/1468/1468372.png" class="mr-3 rounded-circle" width="50" alt="User" /></a>
+                            <div class="media-body">
+                                <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{{ room.name }}</a></h6>
+                                
+                                <p class="text-muted"><a class="room-btn" href="{{ path('app_rooms_show', {'id': room.id})}}">Entrer dans la discussion</a></p>
+                                <p class="text-muted"><a class="room-btn" href="{{ path('app_rooms_edit', {'id': room.id})}}">Editer la discussion</a></p>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
 {{ include('footer.html.twig')}}
 
 
