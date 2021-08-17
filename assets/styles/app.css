@@ -184,6 +184,13 @@ h6{
     padding-top: 20%;
 }
 
+.card-body-1:hover{
+    transition: 1s;
+    background-size: 105%;
+    background-position: center;
+}
+
+
 .card-body-2{
     padding-top: 20%;
 }
@@ -193,6 +200,12 @@ h6{
     background-size: cover;
     height: 25rem;
     padding-top: 20%;
+}
+
+.card-body-3:hover{
+    transition: 1s;
+    background-size: 105%;
+    background-position: center;
 }
 
 .btn-card {
