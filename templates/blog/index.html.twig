@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Actualités haltérophilie{% endblock %}
+
+{% block body %}
+{{ include('_navbar2.html.twig')}}     
+
+<h1 class="h1-blog-index">Toutes les actualités</h1>
+
+{% for article in articles %}
+
+
+<div class="card card-blog-index" style="width: 18rem;">
+    <div class="card-body">
+        <img src="/uploads/{{ article.illustration }}" class="img-blog" alt="">
+      <h5 class="card-title">{{ article.title }}
+    </h5>
+      <p class="card-text">{{ article.resume }}</p>
+      <p class="card-text">Ecrit par : {{ article.author }}</p>
+      <a href="{{ path('blog_show', {'id': article.id}) }}" class="nav-link-blog-index">En savoir plus</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+    {{ include('footer.html.twig')}}
+
+{% endblock %}

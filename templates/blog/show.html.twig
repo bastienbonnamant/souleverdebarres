@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Articles haltérophilie{% endblock %}
+
+{% block body %}
+{{ include('_navbar2.html.twig')}}     
+
+<div class="card card-article">
+    <div class="card-body">
+        <img src="/uploads/{{ article.illustration }}" class="img-blog" alt="">
+        <h1 class="h1-article-show">{{ article.title }}</h1>
+        <p>Ecrit par : {{ article.author }}</p>
+    
+        <p>{{ article.content }}</p>
+    </div> 
+        <a href="{{ path('blog_index') }}" class="nav-link-article">Retour</a>    </div>
+  </div>
+
+    
+
+
+    {{ include('footer.html.twig')}}
+
+{% endblock %}
