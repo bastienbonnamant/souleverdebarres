@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block body %}
+{{ include('_navbar2.html.twig')}}
+    
+
+<div class="card card-blog-index" style="width: 18rem;">
+    <h3>Mon compte</h3>
+    <p>Bienvenue {{ app.user.username}} dans votre compte</p>
+    <p>Ou souhaitez vous aller ?</p>
+
+    <div class="card-body">
+    <ul class="list-group">
+        {% if is_granted('ROLE_ADMIN') %}
+    <a class="nav-link-home list-group-item" href="{{ path('admin')}}">Aller vers le back office</a>
+    {% endif %}
+    <a class="nav-link-1 list-group-item" href="{{ path('home')}}">Accueil <span class="sr-only">(current)</span></a>
+    <a class="nav-link-1 list-group-item" href="{{ path('app_rooms_index')}}">Forum</a>
+    <a class="nav-link-1 list-group-item" href="{{ path('blog_index')}}">Actualités</a>
+
+    </ul>
+    </div>
+  </div>
+</div>
+{{ include('footer.html.twig')}}
+
+{% endblock %}

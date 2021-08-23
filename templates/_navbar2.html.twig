@@ -15,9 +15,18 @@
       <li class="nav2-item">
         <a class="nav-link-1" href="{{ path('app_rooms_index')}}">Forum</a>
       </li>
-      <li class="nav2-item">
-        <a class="nav-link-1" href="{{ path('security_login')}}">Connexion</a>
-      </li>
+      {% if not app.user %}
+        <li class="nav2-item">
+            <a class="nav-link-home" href="{{ path('security_login')}}">Connexion</a>
+          </li>
+          {% else %}
+          <li class="nav2-item">
+            <a class="nav-link-1" href="{{ path('security_logout')}}" class="">Déconnexion</a>
+            </li>
+            <li class="nav2-item">
+            <a class="nav-link-1" href="{{ path('user_page')}}">Mon compte</a>
+          </li>
+          {% endif %}
       <li class="nav2-item">
         <a class="nav-link-1" href="{{ path('security_registration')}}">S'inscrire</a>
       </li>

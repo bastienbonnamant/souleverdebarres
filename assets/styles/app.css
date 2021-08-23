@@ -36,11 +36,12 @@ input#search_gym_search {
     width: 850px;
 }
 
-a.nav-link {
+a.nav-link-home {
     background-color: #A2A2E0;
     margin: 10px;
+    padding: 7px;
     border-radius: 20px;
-    color: white;
+    color: white!important;
 }
 
 .navbar-light .navbar-brand {
@@ -50,11 +51,11 @@ a.nav-link {
     text-shadow: 2px 1px 11px black;
 }
 
-a.nav-link:hover {
+a.nav-link-home:hover {
     background-color: white;
     margin: 10px;
     border-radius: 20px;
-    color: #A2A2E0;
+    color: #A2A2E0!important;
 }
 
 nav.bg-transparent.sticky-top.navbar.navbar-expand-lg.navbar-light.bg-light {

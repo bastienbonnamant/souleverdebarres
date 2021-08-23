@@ -87,5 +87,13 @@ class SecurityController extends AbstractController
         
     }
 
+    /**
+     * @Route("/user", name="user_page")
+     */
+    public function userpage(){
+       
+        return $this->render('security/user.html.twig');
+    }
+
 
 }

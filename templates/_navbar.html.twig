@@ -7,25 +7,27 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="{{ path('home')}}">Accueil <span class="sr-only">(current)</span></a>
+          <a class="nav-link-home" href="{{ path('home')}}">Accueil <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Trouver une salle</a>
+          <a class="nav-link-home" href="#">Trouver une salle</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="{{ path('blog_index')}}">Actualités</a>
+        <a class="nav-link-home" href="{{ path('blog_index')}}">Actualités</a>
       </li>
         {% if not app.user %}
         <li class="nav-item">
-            <a class="nav-link" href="{{ path('security_login')}}">Connexion</a>
+            <a class="nav-link-home" href="{{ path('security_login')}}">Connexion</a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a href="{{ path('security_logout')}}" class="">Déconnexion</a>
+            <a class="nav-link-home" href="{{ path('security_logout')}}" class="">Déconnexion</a>
+            <a class="nav-link-home" href="{{ path('user_page')}}">Mon compte</a>
+
           </li>
           {% endif %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ path('security_registration')}}">Inscription</a>
+            <a class="nav-link-home" href="{{ path('security_registration')}}">Inscription</a>
           </li>
         
         
