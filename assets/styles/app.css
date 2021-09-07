@@ -88,6 +88,11 @@ img.card-img.banner {
     background-size: cover;
 }
 
+.card.mb-2.card-shadow{
+    border-radius: 6px;
+    box-shadow: 2px 4px 8px #d7d7d7;
+}
+
 
 
 .card-img-overlay {
@@ -326,6 +331,23 @@ p.card-text-1 {
 /*
 * FORUM INDEX
 */
+
+a.room-btn {
+    background-color: #A2A2E0;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 75%;
+}
+
+a.room-btn:hover {
+    background-color: white;
+    color: #A2A2E0;
+    border: 1px solid #A2A2E0;
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 75%;
+}
 
 .inner-wrapper {
     position: relative;
