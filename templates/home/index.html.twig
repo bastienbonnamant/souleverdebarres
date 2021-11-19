@@ -41,7 +41,7 @@
 {# TABLE #}
 <h1 class="titre-table">Toutes les salles pour pratiquer l'haltérophilie</h1>
 {% include 'search/search.html.twig' %}  
-
+{#
 <table class="table home-table">
   <thead class="thead-color">
     <tr>
@@ -53,7 +53,6 @@
 
     </tr>
   </thead>
-  {% for gym in gyms %}            
 
   <tbody>
     <tr>
@@ -65,7 +64,25 @@
 
     </tr>
     <tr>
-  </tbody>
+  </tbody> #}
+  {% for gym in gyms %}            
+
+  <div class="card-gym">
+  
+  <div class="card-body-gym">
+  
+    {{ gym.name }}
+  </div>
+  <div class="card-body-gym">
+    {{ gym.adress }}
+  </div>
+  <div class="card-body-gym">
+    {{ gym.email }}
+  </div>
+  <div class="card-body-gym">
+    {{ gym.label }}
+  </div>
+</div>
 
   {% endfor %}
 
